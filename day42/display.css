@@ -1,0 +1,29 @@
+
+/*확인용*/
+*{border: 1px solid red;}
+
+.s1{
+    display: inline /*span 마크업은 inline 기본겂*/;
+    width: 100px; height: 100px;/*inline 가로 /세로 사이즈 적용 불가능*/
+    margin: 20px;/*inline 바깥여백 적용 불가능*/
+    padding: 10px;/*inline 안쪽여백이 위/아래 적용 불가능 */
+    
+}
+.s2{
+    /*block 속성은 한줄 차지*/
+    display: block;
+    width: 100px; height: 100px;/*block 가로/세로 사이즈 적용가능*/
+    margin: 20px; /*block  바깥여백 적용가능*/
+    padding: 20px;/*block 안쪽여백 적용가능*/
+}
+
+.s3{
+    /*inline-block 속성값은 inline과 block 합친것*/
+    display: inline-block;
+    width: 100px; height: 100px;/*inline-block 가로/세로 사이즈 적용*/
+    margin: 20px;/*inline-block 안쪽/바깥 여백 적용가능*/
+    padding: 10px;
+}
+.s4{
+    display: none;/*none 속성값은 표시안함(숨기기)*/
+}
