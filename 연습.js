@@ -1,50 +1,89 @@
-let numlist=[];
-let num=``;
-let searchIndex =``;
+let productList=[]
+let priceList=[]
+let dayList=[]
 
-for(let i=1;i<=6;i++){
-num=Number(prompt(`${i}숫자입력`)) 
-if(num==0 || num>=46){i-- ;continue} // 만약 0이거나 45보다 크다면 다시 반복문으로 , 증감식이 증감되면 안됨 
-else if (numlist.length==0){numlist.push(num),numHTML+=numlist} //만약 배열에 저장된게 없다면 저장
-else if(numlist.includes(num)==true){i-- ;continue} // 입력한 숫자가 리스트에 있다면 반복문으로, 증감식이 증가되면 안됨 
-else{numlist.push(num),numHTML+=numlist } //입력값 리스트에 저장 
-}console.log(numlist);
+function book(){
+    let day=document.querySelector('.day');
+    let product=document.querySelector('.product');
+    let pric=document.querySelector('.pric');
+    
+    let d=day.value;
+    let pro=product.value;
+    let p=pric.value;
+    
+    dayList.push(d)
+    productList.push(pro)
+    priceList.push(p)
+
+    console.log(dayList);
+    console.log(productList);
+    console.log(priceList);
+
+    return dayList,productList,priceList;
+}
+
+function mList(){
+    let list=document.querySelector('.list');
+    
+    let html=`<table border=1>`;
+
+    
+    for(let index=0;index<=productList.length-1;index++){
+        html+=`<tr><td>${dayList[index]}</td>
+        <td>${productList[index]}</td>
+        <td>${priceList[index]}</td></tr>`
+    }
+    html+=`</table>`
+    
+    list.innerHTML=html;
+
+
+}
+
+
+
+
+
+/*function accountBook(date,product,price){
+ let date=document.querySelector('.date');
+ let product=document.querySelector('.product');
+ let price=document.querySelector('.price');
+
+ let day=date.value;
+ let name=product.value;
+ let price=price.value;
+
+ accountList.push(day,name,price);
  
-
-
-
-/*for(let index=0; index<=numlist.length-1;index++){
-
-   if(numlist[i]==searchIndex){break}
+ return accountList;
 }
-} console.log(numlist);
 
-/*for(let index=0; index<=numlist.length-1;index++){
-    if(numlist[index]==num){numlist.slice(index,1)
-        break
+function list(){
+    let list=document.querySelector('.list')
+    let html=``;
+    for(let index=0;index<= accountList.length-1;index++){
+        html+=`<div>${accountList[index]}</div>`
+    }
+    list.innerHTML=html;
 }
-};*/
 
-/*for(let index=0; index<=numlist.length-1;index++){
-    if(numlist[index]==num){numlist.slice(index,1),
-        num=Number(prompt(`숫자입력`)),
-        numlist.push(num)
-        continue;
-     }else{console.log(numlist)}
-    }*/
+ <input class="product" type="text"placeholder="항목"/>
+    <input class="price" placeholder="가격"/>
+    <button onclick="accountBook(date,product,price)">등록</button>
 
-//if(num==0 &&num>45){ }
-//else{numlist.push(num) }
+    <h3>미니 가계부 정보 출력</h3>
+    <button onclick="list()"> 가계부 출력</button>
+    <div class="list">
 
+    </div>
 
-/*for(let index=0; index<=numlist.length-1;index++){
-    if(numlist[index]==num){numlist.slice(index,1),
-        num=Number(prompt(`숫자입력`)),
-        numlist.push(num)
-        continue
-     }else{console.log(numlist)}
+    */
 
-}*/
+  /*  <div class="list">
+        <table >
+            <tr>
+                <td><button onclick="mList()">가계부 출력</button></td>
+            </tr>
+        </table>
 
-
-
+    </div>*/
