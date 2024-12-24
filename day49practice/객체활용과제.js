@@ -70,7 +70,7 @@ function login(){
     let nicname=`` // 현재 input 값은 아이디와 비밀번호뿐, 닉네임을 가져오려면 변수를 하나 선언해준다
             for(let index=0;index<=memberTable.length-1;index++){// 멤버 배열 조회하면서
             let memberDto = memberTable[index];//멤버 배열에 있는 객체를 dto에 저장
-             nicname=memberDto.nicname;
+             nicname=memberDto.nicname; 
             if( memberDto.id == id && memberDto.pw == pw &&memberDto.nicname==nicname )// 객체의 아이디 비밀번호 닉네임이 모두 같을 때
                     {alert(`${nicname}님 환영합니다`)}}
             
