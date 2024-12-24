@@ -20,7 +20,7 @@ function signUp(){
     // 1. 회원가입시 아이디 중복검사 , 이미 등록된 아이디 이면 회원가입 실패 , 유효성검사.
     
     for(let index=0;index<=memberTable.length-1;index++){
-        let memeber=memberTable[index].id;
+        let memeber=memberTable[index];
         if(memberTable.length ==1){alert(`아이디 사용가능`)} // 배열에 저장된 아이디가 처음으로 저장된 거라면
         else if(memeber==id){alert(`아이디중복`)}// 입력된 아이디가 배열의 인덱스번째에 있는 아이디라면 중복
         else{alert(`아이디 사용가능`)}// 그외 사용가능
