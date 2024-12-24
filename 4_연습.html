@@ -12,20 +12,28 @@
 
     <script src='연습.js'></script>
     
-    <h3> 가계부 등록 </h3>
-    날짜<input class="day" type="date" placeholder="날짜/">
-    항목 <input class="product" type='text' placeholder="항목"/>
-    금액 <input class="pric" type='number' placeholder="금액"/>
-    <button onclick="book()">등록</button>
-
-    <h3>가계부 출력</h3>
-    <button onclick="mList()">가계부 출력</button>
-    <div class="list">
     
+    <div class='loginNicName'></div>
 
+    <div> <!-- div는 html에서 레이아웃/구역 나눌때 사용되는 마크업 -->
+        <h3> 회원가입 </h3> <!-- h3는 html에서 제목 표현할때 사용되는 마크업 -->
+        아이디 : <input class="signid" type="text "/> <br/> <!-- input마크업은 입력상자  , br 마크업은 줄바꿈처리-->
+        비밀번호 : <input class="signpw" type="password" /> <br/>
+        닉네임 : <input class="signnic" type="text" /> <br/>
+        <button onclick="signUp()" > 회원가입 </button>
     </div>
-        
 
+    <div>
+        <h3> 로그인 </h3>
+        아이디 : <input class="loginid" type="text" /> <br/>
+        비밀번호 : <input class="loginpw" type="password" /> <br/>
+        <button onclick="login()"> 로그인 </button>
+    </div>
+
+    <div class="memberListBox">
+        <h3> 회원명단 </h3>
+        
+    </div>
     
     
     
